@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33057402438518564}
   - component: {fileID: 65546817228603052}
   - component: {fileID: 23075578424285338}
+  - component: {fileID: 114564517666558096}
   m_Layer: 0
-  m_Name: Green Block
-  m_TagString: Untagged
+  m_Name: Block
+  m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -55,7 +56,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 3d88827a36f5a9840b44d5c392e3bffd, type: 2}
+  - {fileID: 2100000, guid: 02e244d12db2c7b4d844d16975e4926b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -93,3 +94,14 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114564517666558096
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1272156464088774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1002f7d8105059d40b8dc03617af7f29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

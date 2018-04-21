@@ -7,12 +7,12 @@ public class PlayerController : MonoBehaviour {
 	public Transform bulletSpawn;
 	public float speed;
 
-	private Rigidbody rb;
+	//private Rigidbody rb;
 
 	// Called on the first frame that the script is active
 	void Start()
 	{
-		rb = GetComponent<Rigidbody>();
+		//rb = GetComponent<Rigidbody>();
 	}
 
 	// Called before rendering a frame
