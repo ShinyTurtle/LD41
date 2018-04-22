@@ -219,7 +219,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blockPrefab: {fileID: 1272156464088774, guid: c9b40099e137d104aa0cf446000983d4,
     type: 2}
-  numberOfBlocks: 5
+  numberOfBlocks: 20
+  colorPrefabs:
+  - {fileID: 1272156464088774, guid: c7ff540dbe8984249bc1030bad738953, type: 2}
+  colorMaterials:
+  - {fileID: 2100000, guid: e2538fe068f926744ad7fd20d566c057, type: 2}
 --- !u!4 &379361492
 Transform:
   m_ObjectHideFlags: 0
