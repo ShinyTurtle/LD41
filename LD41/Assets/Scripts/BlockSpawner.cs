@@ -48,14 +48,15 @@ public class BlockSpawner : MonoBehaviour {
 			spawnPosition.y -= 0.5f;
 
 			// Make sure blocks aren't sitting on the Player
-			if (spawnPosition.x == player.transform.position.x)
+			if (spawnPosition.x == Mathf.Ceil(player.transform.position.x) || spawnPosition.x == Mathf.Floor(player.transform.position.x))
 			{
 				spawnPosition.x++;
 			}
 
-			if (spawnPosition.z == player.transform.position.z)
+			if (spawnPosition.z == Mathf.Ceil(player.transform.position.z) || spawnPosition.z == Mathf.Floor(player.transform.position.z))
 			{
-				spawnPosition.y++;
+				spawnPosition.z++;
+
 			}
 
 			// Fixed rotation
