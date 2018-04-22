@@ -26,6 +26,8 @@ public class Block : MonoBehaviour {
 	{
 		// Determine if any objects next to this one are the same color
 		Collider[] hitColliders = Physics.OverlapBox(gameObject.transform.position, /*new Vector3(0.5f, 0.5f, 0.5f)*/ transform.localScale / 2);
+
+		int multiplier = 1;
 		foreach (Collider collider in hitColliders)
 		{
 			if (collider.gameObject.CompareTag("Block") && gameObject != collider.gameObject)
@@ -34,18 +36,19 @@ public class Block : MonoBehaviour {
 
 				if (renderer.material.color.Equals(myMaterial.color))
 				{
-					collider.gameObject.GetComponent<Block>().OnSame();
+					collider.gameObject.GetComponent<Block>().OnSame(multiplier);
+					multiplier++;
 				}
 			}
 		}
 		
-		spawner.BlockDestroyed();
+		spawner.BlockDestroyed(multiplier);
 		Destroy(gameObject);
 	}
 
-	public void OnSame()
+	public void OnSame(int multiplier)
 	{
-		spawner.BlockDestroyed();
+		spawner.BlockDestroyed(multiplier);
 		Destroy(gameObject);
 	}
 }

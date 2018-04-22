@@ -74,10 +74,10 @@ public class BlockSpawner : MonoBehaviour {
 		Debug.Log("Level: " + level + " Blocks: " + currentNumberOfBlocks);
 	}
 
-	public void BlockDestroyed()
+	public void BlockDestroyed(int multiplier)
 	{
 		currentNumberOfBlocks--;
-		score++;
+		score += multiplier;
 		SetScoreText();
 
 		if (currentNumberOfBlocks == 0)
