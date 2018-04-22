@@ -13,7 +13,7 @@ public class BlockSpawner : MonoBehaviour {
 			// Random position
 			var spawnPosition = new Vector3(
 				                   Random.Range(-8, 8),
-				                   0.0f,
+				                   -0.5f,
 				                   Random.Range(-8, 8));
 		
 			// Fixed rotation

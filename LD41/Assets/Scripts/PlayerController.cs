@@ -7,14 +7,6 @@ public class PlayerController : MonoBehaviour {
 	public Transform bulletSpawn;
 	public float speed;
 
-	//private Rigidbody rb;
-
-	// Called on the first frame that the script is active
-	void Start()
-	{
-		//rb = GetComponent<Rigidbody>();
-	}
-
 	// Called before rendering a frame
 	void Update() 
 	{
@@ -28,18 +20,6 @@ public class PlayerController : MonoBehaviour {
 		{
 			Fire();
 		}
-	}
-
-	// Called before performing any physics calculations
-	void FixedUpdate()
-	{
-		/*float moveHorizontal = Input.GetAxis("Horizontal");
-		float moveVertical = Input.GetAxis("Vertical");
-
-		// Set y to z since we don't want the player to move up at all
-		Vector3 movement = new Vector3(moveHorizontal, 0, moveVertical);
-
-		rb.AddForce(movement * speed);*/
 	}
 
 	void Fire() 
