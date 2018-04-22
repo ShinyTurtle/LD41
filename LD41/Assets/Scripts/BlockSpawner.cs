@@ -1,40 +1,99 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BlockSpawner : MonoBehaviour {
 
 	public GameObject blockPrefab;
-	public int numberOfBlocks;
-	public GameObject[] colorPrefabs;
-	public Material[] colorMaterials;
+	public int baseNumberOfBlocks;
+	public GameObject player;
+	public Text scoreText;
+	public Text levelText;
+
+	private int level;
+	private int currentNumberOfBlocks;
+	private int score;
 
 	// Use this for initialization
 	void Start () {
-		// Initialize color prefab array
+		level = 1;
+		currentNumberOfBlocks = 0;
+		score = 0;
 
+		SetScoreText();
+		SetLevelText();
 
-		for (int i = 0; i < numberOfBlocks; i++)
+		createBlocks();
+	}
+
+	void createBlocks()
+	{
+		currentNumberOfBlocks = 0;
+
+		for (int i = 0; i < baseNumberOfBlocks * level; i++)
 		{
+			int xzRange = 7;
+			if (level <= xzRange)
+			{
+				xzRange = level;
+			}
 			// Random position
 			var spawnPosition = new Vector3(
-				                   Random.Range(-8, 8),
-				                   -0.5f,
-				                   Random.Range(-8, 8));
-		
+				Random.Range(-1 * xzRange, 1 * xzRange),
+				Random.Range(0, level),
+				Random.Range(-1 * xzRange, 1 * xzRange));
+
+			// Correct y position so it sits on the plane correctly
+			spawnPosition.y -= 0.5f;
+
+			// Make sure blocks aren't sitting on the Player
+			if (spawnPosition.x == player.transform.position.x)
+			{
+				spawnPosition.x++;
+			}
+
+			if (spawnPosition.z == player.transform.position.z)
+			{
+				spawnPosition.y++;
+			}
+
 			// Fixed rotation
 			var spawnRotation = new Quaternion(
-				                   0,
-				                   0,
-				                   0,
-				                   0);
+				0,
+				0,
+				0,
+				0);
 
-			var block = (GameObject)Instantiate(blockPrefab, spawnPosition, spawnRotation);
+			Instantiate(blockPrefab, spawnPosition, spawnRotation);
 
-			var renderer = GetComponent<Renderer>();
-			if (renderer != null)
-			{
-				renderer.material = colorMaterials[0];
-			}
+			currentNumberOfBlocks++;
 		}
+
+		Debug.Log("Level: " + level + " Blocks: " + currentNumberOfBlocks);
+	}
+
+	public void BlockDestroyed()
+	{
+		currentNumberOfBlocks--;
+		score++;
+		SetScoreText();
+
+		if (currentNumberOfBlocks == 0)
+		{
+			level++;
+			SetLevelText();
+			createBlocks();
+		}
+	}
+
+	void SetScoreText()
+	{
+		scoreText.text = "Score: " + score.ToString();
+	}
+
+	void SetLevelText()
+	{
+		levelText.text = "Level: " + level.ToString();
 	}
 }

@@ -9,8 +9,8 @@ public class Bullet : MonoBehaviour {
 		var collisionObj = collision.gameObject;
 		if (collisionObj.CompareTag("Block"))
 		{
-			// Collided with a block - destroy the block
-			Destroy(collisionObj);
+			// Collided with a block
+			collisionObj.GetComponent<Block>().OnHit();
 		}
 
 		// Destroy the bullet
