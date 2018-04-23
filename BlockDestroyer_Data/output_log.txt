@@ -1,0 +1,57 @@
+Initialize engine version: 2017.1.0f3 (472613c02cf7)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1080 Ti (ID=0x1b06)
+    Vendor:   NVIDIA
+    VRAM:     11132 MB
+    Driver:   23.21.13.8813
+Begin MonoManager ReloadAssembly
+Platform assembly: D:\Unity\LD41\BlockDestroyer_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\Unity\LD41\BlockDestroyer_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\Unity\LD41\BlockDestroyer_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\Unity\LD41\BlockDestroyer_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: D:\Unity\LD41\BlockDestroyer_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading D:\Unity\LD41\BlockDestroyer_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: D:\Unity\LD41\BlockDestroyer_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading D:\Unity\LD41\BlockDestroyer_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: D:\Unity\LD41\BlockDestroyer_Data\Managed\UnityEngine.Timeline.dll (this message is harmless)
+Loading D:\Unity\LD41\BlockDestroyer_Data\Managed\UnityEngine.Timeline.dll into Unity Child Domain
+Platform assembly: D:\Unity\LD41\BlockDestroyer_Data\Managed\System.dll (this message is harmless)
+Platform assembly: D:\Unity\LD41\BlockDestroyer_Data\Managed\System.Core.dll (this message is harmless)
+- Completed reload, in  0.133 seconds
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 1.985831 ms
+Setting up 4 worker threads for Enlighten.
+  Thread -> id: 2364 -> priority: 1 
+  Thread -> id: 15a0 -> priority: 1 
+  Thread -> id: 3b48 -> priority: 1 
+  Thread -> id: 3e08 -> priority: 1 
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 8.128864 ms
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 363.
+Total: 0.280625 ms (FindLiveObjects: 0.029500 ms CreateObjectMapping: 0.017554 ms MarkObjects: 0.214065 ms  DeleteObjects: 0.018773 ms)
+
+Level: 1 Blocks: 5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Level: 2 Blocks: 10
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Level: 3 Blocks: 15
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Level: 4 Blocks: 20
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Level: 5 Blocks: 25
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
