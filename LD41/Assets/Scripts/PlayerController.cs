@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour {
 	// Called before rendering a frame
 	void Update() 
 	{
-		var x = Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f;
+		var x = Input.GetAxis("Horizontal") * Time.deltaTime * 100.0f;
 		var z = Input.GetAxis("Vertical") * Time.deltaTime * 3.0f;
 
 		transform.Rotate(0, x, 0);
